@@ -23,6 +23,9 @@ class DowaNavigationWidget {
     }
 
     async init() {
+        // Load CSS styles
+        this.loadStyles();
+
         // Check if user is already authenticated
         await this.checkAuthStatus();
 
@@ -36,6 +39,15 @@ class DowaNavigationWidget {
         window.dowaNavigationWidget = this;
 
         console.log('✅ DOWA Navigation Widget initialized');
+    }
+
+    loadStyles() {
+        // Load navigation CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/extensions/comfyui-dowa/../styles/navigation.css';
+        document.head.appendChild(link);
     }
 
     async checkAuthStatus() {
