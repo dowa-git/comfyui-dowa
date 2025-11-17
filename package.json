@@ -1,0 +1,41 @@
+{
+  "name": "comfyui-dowa",
+  "version": "1.0.0",
+  "description": "Professional navigation bar widget for ComfyUI with authentication and collaboration features",
+  "main": "__init__.py",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dowa-git/comfyui-dowa.git"
+  },
+  "keywords": [
+    "comfyui",
+    "navigation",
+    "widget",
+    "authentication",
+    "ui",
+    "custom-node"
+  ],
+  "author": "DOWA Development Team",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/dowa-git/comfyui-dowa/issues"
+  },
+  "homepage": "https://github.com/dowa-git/comfyui-dowa#readme",
+  "comfyui": {
+    "node_type": "custom",
+    "display_name": "DOWA Navigation Bar",
+    "category": "dowa/ui",
+    "output_node": true,
+    "dependencies": []
+  },
+  "files": [
+    "__init__.py",
+    "navigation_node.py",
+    "js/",
+    "styles/",
+    "README.md"
+  ]
+}

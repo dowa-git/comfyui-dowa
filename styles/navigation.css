@@ -1,0 +1,382 @@
+/**
+ * DOWA Navigation Widget Styles
+ * Professional navigation bar for ComfyUI
+ */
+
+/* Navigation Bar Container */
+.dowa-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Left Side */
+.dowa-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Logo */
+.dowa-nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: default;
+}
+
+.dowa-logo-icon {
+    color: white;
+}
+
+/* Navigation Menu */
+.dowa-nav-menu {
+    display: flex;
+    gap: 8px;
+}
+
+/* Navigation Buttons */
+.dowa-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.dowa-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.dowa-nav-btn svg {
+    flex-shrink: 0;
+}
+
+.dowa-btn-primary {
+    background: rgba(255, 255, 255, 0.9);
+    color: #667eea;
+    border-color: transparent;
+}
+
+.dowa-btn-primary:hover {
+    background: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Right Side */
+.dowa-nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* User Menu */
+.dowa-user-menu {
+    position: relative;
+}
+
+.dowa-user-menu-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dowa-user-menu-trigger:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dowa-user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+
+.dowa-user-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dowa-chevron {
+    transition: transform 0.2s ease;
+}
+
+.dowa-user-menu-trigger:hover .dowa-chevron {
+    transform: translateY(2px);
+}
+
+/* User Dropdown */
+.dowa-user-menu-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 200px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 10001;
+}
+
+.dowa-user-menu-header {
+    padding: 16px;
+    background: #f8f9fa;
+}
+
+.dowa-user-menu-info {
+    color: #333;
+}
+
+.dowa-user-menu-name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.dowa-user-menu-email {
+    font-size: 12px;
+    color: #666;
+}
+
+.dowa-menu-divider {
+    height: 1px;
+    background: #e9ecef;
+}
+
+.dowa-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s ease;
+}
+
+.dowa-menu-item:hover {
+    background: #f8f9fa;
+}
+
+.dowa-menu-item svg {
+    flex-shrink: 0;
+    color: #666;
+}
+
+/* Login Dialog */
+.dowa-login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 10002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.dowa-login-dialog {
+    background: white;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90vw;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.dowa-login-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.dowa-login-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.dowa-login-close {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: #666;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease;
+}
+
+.dowa-login-close:hover {
+    background: #f8f9fa;
+}
+
+.dowa-login-form {
+    padding: 24px;
+}
+
+.dowa-form-group {
+    margin-bottom: 20px;
+}
+
+.dowa-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.dowa-form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    box-sizing: border-box;
+}
+
+.dowa-form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.dowa-login-error {
+    padding: 12px;
+    background: #fee;
+    border: 1px solid #fcc;
+    border-radius: 6px;
+    color: #c33;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.dowa-login-actions {
+    margin-top: 24px;
+}
+
+.dowa-login-actions button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dowa-login-actions button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.dowa-login-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.dowa-btn-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dowa-btn-loading::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dowa-nav-bar {
+        padding: 0 12px;
+    }
+
+    .dowa-user-name {
+        display: none;
+    }
+
+    .dowa-nav-btn span {
+        display: none;
+    }
+}

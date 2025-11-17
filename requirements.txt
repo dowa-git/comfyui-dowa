@@ -1,0 +1,5 @@
+# DOWA Navigation Widget - Python Dependencies
+# This widget is primarily JavaScript-based and requires no additional Python packages
+# beyond the standard ComfyUI dependencies.
+
+# No additional requirements
