@@ -46,7 +46,7 @@ class DowaNavigationWidget {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = '/extensions/comfyui-dowa/../styles/navigation.css';
+        link.href = '/extensions/comfyui-dowa/navigation.css';
         document.head.appendChild(link);
     }
 
